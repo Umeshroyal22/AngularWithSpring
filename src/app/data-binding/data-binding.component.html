@@ -1,0 +1,23 @@
+<h2>EMI Calculator (Live Data Binding)</h2>
+
+<label>Principal Amount:</label>
+<input type="number" [(ngModel)]="principal" /><br/><br/>
+
+<label>Annual Interest Rate (%):</label>
+<input type="number" [(ngModel)]="rate" /><br/><br/>
+
+<label>Tenure (Years):</label>
+<input type="number" [(ngModel)]="tenure" /><br/><br/>
+
+<button (click)="calculateEMI()">Calculate EMI</button>
+
+<!-- Live display of input values (for checking data binding) -->
+<p>Principal: {{ principal }}</p>
+<p>Rate: {{ rate }}</p>
+<p>Tenure: {{ tenure }}</p>
+
+<!-- Results -->
+<div *ngIf="emi !== null">
+  <h3>Monthly EMI: {{ emi | number:'1.2-2' }}</h3>
+  <h3>Total Amount Payable: {{ totalAmount | number:'1.2-2' }}</h3>
+</div>

@@ -1,0 +1,33 @@
+<h3>
+  Original Name: {{ name }} <br>
+
+  Uppercase: {{ name | uppercase }} <br>
+  Lowercase: {{ name | lowercase }} <br>
+  Titlecase: {{ name | titlecase }} <br><br>
+
+  Salary: {{ salary }} <br>
+  INR: {{ salary | currency:'INR':true }} <br>
+  USD: {{ salary | currency:'USD':true }} <br>
+  EUR: {{ salary | currency:'EUR':true }} <br>
+  JPY: {{ salary | currency:'JPY':true }} <br><br>
+
+  Date of Birth: {{ dob }} <br>
+  Short Date: {{ dob | date:'short' }} <br>
+  Medium Date: {{ dob | date:'medium' }} <br>
+  Long Date: {{ dob | date:'long' }} <br>
+  yyyy-MM-dd: {{ dob | date:'yyyy-MM-dd' }} <br>
+  yy-MM-dd: {{ dob | date:'yy-MM-dd' }} <br>
+  dd-MM-yyyy: {{ dob | date:'dd-MM-yyyy' }} <br><br>
+
+  Object: {{ obj }} <br>
+  JSON Format: {{ obj | json }} <br>
+</h3>
+
+<h3>Square Root Examples:</h3>
+{{ 5 | sqrt }} <br>
+{{ 10 | sqrt }} <br>
+{{ 25 | sqrt }} <br>
+
+<h3>Factorial Examples:</h3>
+<p>factorial of 5 = {{ 5 | factorial }}</p>
+<p>factorial of 7 = {{ 7 | factorial }}</p>

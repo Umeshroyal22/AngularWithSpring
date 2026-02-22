@@ -1,0 +1,51 @@
+<div>
+  <h1>Hii div 1</h1>
+</div>
+
+<div *ngIf="true">
+  <h1>Hii div 2</h1>
+</div>
+
+<div *ngIf="abc">
+  <h1>Hii div 3</h1>
+</div>
+
+<!-- Employees -->
+<p *ngFor="let emps of emp">
+  {{ emps }}
+</p>
+
+<!-- Input -->
+<input type="text" #fru placeholder="Enter fruit">
+<button (click)="addFruit(fru.value); fru.value=''">Add Fruit</button>
+
+<!-- ngSwitch -->
+<div [ngSwitch]="selectedFruit">
+  <p *ngSwitchCase="'Apple'">🍎 Apple added</p>
+  <p *ngSwitchCase="'Banana'">🍌 Banana added</p>
+  <p *ngSwitchCase="'Mango'">🥭 Mango added</p>
+  <p *ngSwitchDefault>✅ Fruit added</p>
+</div>
+
+<!-- Fruit list -->
+<ul>
+  <li *ngFor="let f of fruits">
+    {{ f }}
+  </li>
+</ul>
+
+
+
+
+<div [ngClass]="{'bdr':true,'bgclr':true}">
+    hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+</div>
+
+
+<div [ngClass]="{'bdr':true,'bgclr':false}">
+  hellloworld
+</div>
+
+<div [ngClass]="{'bdr':false,'bgclr':true}">
+    byeeeeeeeeeeeeeeeeeeeee
+</div>

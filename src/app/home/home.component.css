@@ -1,0 +1,22 @@
+.container {
+  margin-top: 30px;
+}
+
+/* Control carousel size */
+#myCarousel {
+  width: 80%;          /* change to 70%, 90%, or 100% as needed */
+  margin: auto;       /* center the carousel */
+}
+
+/* Control image height */
+.carousel-inner img {
+  width: 500%;
+  height: 400px;      /* change height: 300px / 450px / 500px */
+  object-fit: cover; /* keeps image proportional */
+  border-radius: 12px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}

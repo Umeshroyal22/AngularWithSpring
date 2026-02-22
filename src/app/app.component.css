@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* Whole page background */
+body {
+  background: linear-gradient(to bottom, #98b6cae4, #5e5fb4);
+}
+
+
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.title {
+  color: #958c0f;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: auto;   /* pushes links to the right */
+  letter-spacing: 1px;
+}
+
+/* Navbar links */
+.navbar a {
+  color: #e0f2fe;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  background: rgba(255,255,255,0.12);
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.navbar a:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  transform: translateY(-2px);
+}
+
+/* Active link */
+.navbar a.router-link-active {
+  background: #22c55e;
+  color: #0f172a;
+  font-weight: bold;
+}
+
+/* Content area */
+.content {
+  padding: 25px;
+  margin: 20px;
+  background: white;
+  border-radius: 15px;
+  min-height: 85vh;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}

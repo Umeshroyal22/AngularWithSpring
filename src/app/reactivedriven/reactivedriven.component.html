@@ -1,0 +1,39 @@
+
+
+<form [formGroup]="student" (ngSubmit)="myinfo(student.value)">
+Reactive Driven example
+<br>
+
+  <!-- First Name -->
+  <label>First Name:</label>
+  <input type="text" formControlName="firstname">
+  <div *ngIf="student.get('firstname')?.invalid && student.get('firstname')?.touched" style="color:red">
+    First name must be 3–10 letters only
+  </div>
+  <br><br>
+
+  <!-- Last Name -->
+  <label>Last Name:</label>
+  <input type="text" formControlName="lastname">
+  <div *ngIf="student.get('lastname')?.invalid && student.get('lastname')?.touched" style="color:red">
+    Last name must be 3–10 characters
+  </div>
+  <br><br>
+
+  <!-- Age -->
+  <label>Age:</label>
+  <input type="number" formControlName="age">
+  <div *ngIf="student.get('age')?.invalid && student.get('age')?.touched" style="color:red">
+    Age must be between 18 and 60
+  </div>
+  <br><br>
+
+  <button type="submit" class="btn btn-success" [disabled]="student.invalid">
+    Submit
+  </button>
+
+  <button type="reset" class="btn btn-danger">
+    Reset
+  </button>
+
+</form>

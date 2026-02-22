@@ -1,0 +1,48 @@
+<div>
+  <form #userForm="ngForm" (ngSubmit)="userdata(userForm.value)">
+
+    <div class="form-inline">
+      <label>
+        UserName 
+        <span style="color:red;" *ngIf="uname.invalid && uname.touched">*</span>
+      </label>
+
+      <input type="text"
+             class="form-control"
+             required
+             name="uname"
+             ngModel
+             #uname="ngModel">
+
+      <p style="color:blue;" *ngIf="uname.invalid && uname.touched">
+        Name must be required format
+      </p>
+    </div>
+ <br>
+    <br>
+
+    <div class="form-inline">
+      <label>
+        UserPass
+        <span style="color:red;" *ngIf="upass.invalid && upass.touched">*</span>
+      </label>
+
+      <input type="password"
+             class="form-control"
+             required
+             name="upass"
+             ngModel
+             #upass="ngModel">
+
+      <p style="color:blue;" *ngIf="upass.invalid && upass.touched">
+        Password must have at least 1 special character
+      </p>
+    </div>
+
+    <br>
+
+    <input type="submit" class="btn btn-success" [disabled]="userForm.invalid">
+    <input type="reset" class="btn btn-danger">
+
+  </form>
+</div>
